@@ -6,28 +6,18 @@
   <title>MGRS Вітер та Опади</title>
 
   <link rel="stylesheet" href="lib/leaflet.css" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <div id="search-panel">
-    <input type="text" id="mgrs-input" placeholder="Введіть MGRS (напр. 36UUA12345678)"
-           autocomplete="off" autocapitalize="characters" spellcheck="false" />
-    <button id="search-btn">Перейти</button>
-  </div>
-
-  <div id="weather-card" class="hidden">
-    <div class="weather-header">
-      <span id="coords-display">--</span>
-      <button id="close-card">✕</button>
-    </div>
-
-    <div class="precip-box">
-      🌧 Опади: <strong id="precip">--</strong> мм/год
-    </div>
-
-    <div class="wind-table">
-      <div class="wind-row header">
-        <span>Висота</span>
-        <span>Швидкість</span>
-        <span>Напрямок</span>
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+  background-color: #121212;
+  color: #ffffff;
+}
