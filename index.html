@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>MGRS Вітер та Опади</title>
+
+  <link rel="stylesheet" href="lib/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="search-panel">
+    <input type="text" id="mgrs-input" placeholder="Введіть MGRS (напр. 36UUA12345678)"
+           autocomplete="off" autocapitalize="characters" spellcheck="false" />
+    <button id="search-btn">Перейти</button>
+  </div>
+
+  <div id="weather-card" class="hidden">
+    <div class="weather-header">
+      <span id="coords-display">--</span>
+      <button id="close-card">✕</button>
+    </div>
+
+    <div class="precip-box">
+      🌧 Опади: <strong id="precip">--</strong> мм/год
+    </div>
+
+    <div class="wind-table">
+      <div class="wind-row header">
+        <span>Висота</span>
+        <span>Швидкість</span>
+        <span>Напрямок</span>
+      </div>
+      <div class="wind-row">
+        <span>10 м</span>
+        <strong id="wind-10m">--</strong>
+        <span id="dir-10m">--</span>
+      </div>
+      <div class="wind-row">
+        <span>80 м</span>
+        <strong id="wind-80m">--</strong>
+        <span id="dir-80m">--</span>
+      </div>
+      <div class="wind-row">
+        <span>120 м</span>
+        <strong id="wind-120m">--</strong>
+        <span id="dir-120m">--</span>
+      </div>
+      <div class="wind-row">
+        <span>180 м</span>
+        <strong id="wind-180m">--</strong>
+        <span id="dir-180m">--</span>
+      </div>
+    </div>
+
+    <div class="gusts-info">
+      🚩 Пориви біля землі (10 м): <strong id="wind-gusts">--</strong> м/с
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="lib/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
